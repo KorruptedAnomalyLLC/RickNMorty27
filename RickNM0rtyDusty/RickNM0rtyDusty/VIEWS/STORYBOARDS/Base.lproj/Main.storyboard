@@ -12,7 +12,7 @@
         <!--Root View Controller-->
         <scene sceneID="EpP-Gw-cLa">
             <objects>
-                <tableViewController id="fOA-jP-ewL" sceneMemberID="viewController">
+                <tableViewController id="fOA-jP-ewL" customClass="CharacterListTableViewController" customModule="RickNM0rtyDusty" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8du-7g-zdR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,33 +29,33 @@
                                             <rect key="frame" x="28" y="19" width="358" height="166"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="(Character name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12B-Nf-7oq">
-                                                    <rect key="frame" x="55" y="0.0" width="248" height="36"/>
+                                                    <rect key="frame" x="55" y="0.0" width="248" height="2"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-zy-20j" userLabel="Info and picture stack">
-                                                    <rect key="frame" x="32" y="36" width="294" height="130"/>
+                                                    <rect key="frame" x="15" y="2" width="328" height="164"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fvh-CS-PJq" userLabel="info stack view">
-                                                            <rect key="frame" x="0.0" y="0.0" width="164" height="130"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fvh-CS-PJq" userLabel="info stack view">
+                                                            <rect key="frame" x="0.0" y="0.0" width="164" height="164"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: (alive/dead)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKD-UI-HPm">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="164" height="65"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Status: (alive/dead)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKD-UI-HPm">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="164" height="82"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin: (planet Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1c-5S-YTG">
-                                                                    <rect key="frame" x="0.0" y="65" width="164" height="65"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Origin: (planet Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1c-5S-YTG">
+                                                                    <rect key="frame" x="0.0" y="82" width="164" height="82"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ji9-zv-uUH">
-                                                            <rect key="frame" x="164" y="0.0" width="130" height="130"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Ji9-zv-uUH">
+                                                            <rect key="frame" x="164" y="0.0" width="164" height="164"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Ji9-zv-uUH" secondAttribute="height" multiplier="1:1" id="KkG-vU-QQV"/>
                                                             </constraints>
@@ -63,6 +63,9 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ji9-zv-uUH" firstAttribute="width" secondItem="7Pv-ir-5UF" secondAttribute="width" multiplier="0.5" id="O8y-Gw-9nJ"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>

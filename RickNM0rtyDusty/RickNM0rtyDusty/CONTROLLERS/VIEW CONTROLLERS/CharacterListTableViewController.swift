@@ -14,7 +14,9 @@ class CharacterListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         CharacterController.shared.getCharacters {
-            print("We got our characters!")
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -33,11 +35,11 @@ class CharacterListTableViewController: UITableViewController {
         cell.originLabel.text = character.origin.planetName
         cell.statusLabel.text = character.status
         do {
-             guard let url = URL(string: character.image) else { return UITableViewCell() }
+            guard let url = URL(string: character.image) else { return UITableViewCell() }
             let imageData = try Data(contentsOf: url)
             cell.characterPictureImageView.image = UIImage(data: imageData)
-            } catch {
-                print("There was an error putting an image in our tableView: \(error.localizedDescription)")
+        } catch {
+            print("There was an error putting an image in our tableView: \(error.localizedDescription)")
         }
         return cell
     }

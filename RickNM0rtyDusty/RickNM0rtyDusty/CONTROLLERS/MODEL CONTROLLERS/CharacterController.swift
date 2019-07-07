@@ -41,8 +41,10 @@ class CharacterController {
             let jsonDecoder = JSONDecoder()
            
             do {
-               let characters = try jsonDecoder.decode([Character].self, from: data)
+               let charactersDictionary = try jsonDecoder.decode(TopLevelDictionary.self, from: data)
+                let characters = charactersDictionary.results
                 self.characterList = characters
+                completion()
             } catch {
                 print("There was an error with the jsonDecoder: \(error.localizedDescription)")
                 return
