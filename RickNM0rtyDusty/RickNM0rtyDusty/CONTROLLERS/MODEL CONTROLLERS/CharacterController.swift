@@ -10,7 +10,7 @@ import Foundation
 
 class CharacterController {
     
-    //MARK: - (optional) Singleton/Source of Truth
+    //MARK: - (optional) Singleton
     static let shared = CharacterController()
     private init() {}
     
@@ -24,7 +24,7 @@ class CharacterController {
     
     //MARK: - File functions (like CRUD)
     // GET info from API
-    func getCharacters(completion: @escaping ([Character]?) -> Void) {
+    func getCharacters(completion: @escaping () -> Void) {
         // Make the URL
         guard var baseURL = URL(string: baseURLString) else { return }
         // let components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
